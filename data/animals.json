@@ -1,0 +1,12 @@
+[
+  { "image": "media/animals/cat.png", "word": "قطة" },
+  { "image": "media/animals/chicken.png", "word": "دجاجة" },
+  { "image": "media/animals/cow.png", "word": "بقرة" },
+  { "image": "media/animals/dog.png", "word": "كلب" },
+  { "image": "media/animals/donkey.png", "word": "حمار" },
+  { "image": "media/animals/goat.png", "word": "ماعز" },
+  { "image": "media/animals/horse.png", "word": "حصان" },
+  { "image": "media/animals/mouse.png", "word": "فأر" },
+  { "image": "media/animals/rooster.png", "word": "ديك" },
+  { "image": "media/animals/sheep.png", "word": "خروف" }
+]

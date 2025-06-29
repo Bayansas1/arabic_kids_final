@@ -1,0 +1,23 @@
+[
+  {"image": "media/vegetables/asparagus.png", "word": "هليون"},
+  {"image": "media/vegetables/beans.png", "word": "فاصوليا"},
+  {"image": "media/vegetables/broadbeans.png", "word": "فول"},
+  {"image": "media/vegetables/cabbage.png", "word": "ملفوف"},
+  {"image": "media/vegetables/carrot.png", "word": "جزر"},
+  {"image": "media/vegetables/cauliflower.png", "word": "قرنبيط"},
+  {"image": "media/vegetables/corn.png", "word": "ذرة"},
+  {"image": "media/vegetables/cucumber.png", "word": "خيار"},
+  {"image": "media/vegetables/eggplant.png", "word": "باذنجان"},
+  {"image": "media/vegetables/garlic.png", "word": "ثوم"},
+  {"image": "media/vegetables/leek.png", "word": "كراث"},
+  {"image": "media/vegetables/lettuce.png", "word": "خس"},
+  {"image": "media/vegetables/onion.png", "word": "بصل"},
+  {"image": "media/vegetables/parsley.png", "word": "بقدونس"},
+  {"image": "media/vegetables/peas.png", "word": "بازلاء"},
+  {"image": "media/vegetables/pepper.png", "word": "فلفل"},
+  {"image": "media/vegetables/potato.png", "word": "بطاطا"},
+  {"image": "media/vegetables/squash.png", "word": "يقطين"},
+  {"image": "media/vegetables/tomato.png", "word": "طماطم"},
+  {"image": "media/vegetables/watercress.png", "word": "جرجير"},
+  {"image": "media/vegetables/zucchini.png", "word": "كوسا"}
+]

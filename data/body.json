@@ -1,0 +1,13 @@
+[
+  { "image": "media/body/arms.png", "word": "ذراعان" },
+  { "image": "media/body/belly.png", "word": "بطن" },
+  { "image": "media/body/chest.png", "word": "صدر" },
+  { "image": "media/body/ear.png", "word": "أذن" },
+  { "image": "media/body/eyes.png", "word": "عينان" },
+  { "image": "media/body/foot.png", "word": "قدم" },
+  { "image": "media/body/hands.png", "word": "يدان" },
+  { "image": "media/body/head.png", "word": "رأس" },
+  { "image": "media/body/legs.png", "word": "ساقان" },
+  { "image": "media/body/mouth.png", "word": "فم" },
+  { "image": "media/body/nose.png", "word": "أنف" }
+]
