@@ -21,10 +21,22 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView 
+from core.views import RegisterUserView ,VerifyAnswerView ,GetQuestionView
+from django.urls import path
+
+
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('core.urls')),  # ← ربطنا كل API من تطبيق core
+    path('api/', include('core.urls')),
+    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'), 
+    path('api/users/', RegisterUserView.as_view(), name='register-user'),
+    path('api/games/verify-answer/', VerifyAnswerView.as_view(), name='verify-answer'),
+    path('api/games/get-question/<str:question_type>/', GetQuestionView.as_view(), name='get-question'),
+    path('api/games/get-question/<str:question_type>/<int:question_id>/', GetQuestionView.as_view(), name='get-question-id'),
 ]
 
 # دعم عرض الصور من media/
@@ -33,13 +45,6 @@ if settings.DEBUG:
 
 
 
-from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
-urlpatterns = [
-    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
-    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
-    path('', include('core.urls')),
-]
+ 
 
-
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

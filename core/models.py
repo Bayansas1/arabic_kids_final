@@ -10,6 +10,7 @@ class User(models.Model):
 class WordImageMatch(models.Model):
     word = models.CharField(max_length=100)
     image_url = models.ImageField(upload_to='image/')
+    category=models.CharField(max_length=50) 
 
 class LetterChoice(models.Model):
     question_text = models.CharField(max_length=200)
@@ -26,12 +27,14 @@ class UserSkill(models.Model):
     p_guess = models.FloatField(default=0.2)
     p_slip = models.FloatField(default=0.1)
 
+    
 class UserAnswer(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    question_type = models.CharField(max_length=50)  # "word" أو "letter"
+    question_type = models.CharField(max_length=20)  # "letter" or "match"
     question_id = models.IntegerField()
     is_correct = models.BooleanField()
-    timestamp = models.DateTimeField(auto_now_add=True)
+    letter = models.CharField(max_length=1, null=True, blank=True)  # ✅ هذا هو الجديد
+    created_at = models.DateTimeField(auto_now_add=True)
 
 
 # Create your models here.

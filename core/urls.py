@@ -1,7 +1,11 @@
 
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from .views import *
+from .views import (
+    UserViewSet, WordImageMatchViewSet, LetterChoiceViewSet,
+    UserAnswerViewSet, UserSkillViewSet,
+    RegisterUserView, VerifyAnswerView, GetQuestionView
+)
 
 router = DefaultRouter()
 router.register(r'users', UserViewSet)
@@ -12,19 +16,10 @@ router.register(r'user-skills', UserSkillViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
-    ]
 
-
-from django.urls import path
-from . import views
-
-urlpatterns = [
-    path('api/register/', views.register_user),
-    path('api/letter-question/', views.get_letter_question),
-    path('api/matching-exercise/', views.get_word_image_exercise),
-    path('api/save-answer/', views.save_user_answer),
+    # التسجيل والتحقق من الأسئلة
+    path('register/', RegisterUserView.as_view(), name='register-user'),
+    path('games/verify-answer/', VerifyAnswerView.as_view(), name='verify-answer'),
+    path('games/get-question/<str:question_type>/', GetQuestionView.as_view(), name='get-question'),
+    path('games/get-question/<str:question_type>/<int:question_id>/', GetQuestionView.as_view(), name='get-question-id'),
 ]
-
-# core/urls.py
-
-
