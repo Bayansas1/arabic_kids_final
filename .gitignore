@@ -1,0 +1,46 @@
+# ملفات بايثون المؤقتة
+pycache/
+*.py[cod]
+*$py.class
+
+# ملفات السجلات
+*.log
+
+# بيئة بايثون الافتراضية
+venv/
+.venv/
+ENV/
+env/
+
+# ملفات البيئة (أسرار)
+.env
+.env.*
+*.env
+
+# قاعدة بيانات SQLite
+db.sqlite3
+*.sqlite3
+
+# ملفات الرفع من المستخدمين
+media/
+
+# الملفات الثابتة الناتجة من collectstatic
+staticfiles/
+
+# ملفات الكاش وأدوات الاختبار
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.pyre/
+.tox/
+.nox/
+
+# ملفات محرر الأكواد
+.vscode/
+.idea/
+
+# ملفات النظام
+.DS_Store
+Thumbs.db

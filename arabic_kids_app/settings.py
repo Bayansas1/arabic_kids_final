@@ -24,14 +24,21 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 #SECRET_KEY = 'django-insecure-j42099(3zsdykdd5r&cee2t0k4*^aode9*2h$)8=afp7l=v98s'
 
+# SECRET_KEY: يأخذ من متغير البيئة فقط
 SECRET_KEY = os.environ.get("SECRET_KEY")
-DEBUG = os.environ.get("DEBUG", "true") == "true"
-ALLOWED_HOSTS = ['10.0.2.2', 'localhost', '127.0.0.1', 'your-service-name.onrender.com']
+if not SECRET_KEY:
+    raise ValueError("SECRET_KEY is not set in environment variables.")
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get("DEBUG", "false") == "true"
+# DEBUG: افتراضي False على السيرفر
+DEBUG = os.environ.get("DEBUG", "false").lower() == "true"
 
-
+# ALLOWED_HOSTS: أضف رابط السيرفر + localhost
+ALLOWED_HOSTS = [
+    '10.0.2.2',
+    'localhost',
+    '127.0.0.1',
+    'your-service-name.onrender.com',  # غيّر إلى اسم تطبيقك على Render
+]
 
 
 # Application definition
